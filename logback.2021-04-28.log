@@ -1,0 +1,100 @@
+14:04:32.680 logback [main] INFO  c.springboot.rabbit.DemoApplication - Starting DemoApplication using Java 1.8.0_66 on LiNing-PC with PID 32940 (E:\GitGroup\ProjectOne\target\classes started by LiNing in E:\GitGroup\ProjectOne)
+14:04:32.682 logback [main] INFO  c.springboot.rabbit.DemoApplication - No active profile set, falling back to default profiles: default
+14:04:33.486 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8011 (http)
+14:04:33.494 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8011"]
+14:04:33.495 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:04:33.495 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+14:04:33.572 logback [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:04:33.572 logback [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 836 ms
+14:04:33.735 logback [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+14:04:34.134 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8011"]
+14:04:34.150 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8011 (http) with context path ''
+14:04:34.152 logback [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [172.16.1.135:5672]
+14:04:34.222 logback [main] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#25c53f74:0/SimpleConnection@1744a475 [delegate=amqp://admin@172.16.1.135:5672/, localPort= 63863]
+14:04:34.266 logback [main] INFO  c.springboot.rabbit.DemoApplication - Started DemoApplication in 1.996 seconds (JVM running for 2.699)
+14:04:59.605 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+14:04:59.618 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+14:04:59.618 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:04:59.618 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.45]
+14:04:59.723 logback [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:04:59.723 logback [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1453 ms
+14:05:00.100 logback [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+14:05:00.793 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+14:05:00.816 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 63902 (http) with context path ''
+14:05:00.818 logback [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [172.16.1.135:5672]
+14:05:00.870 logback [main] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#7d9ba6c:0/SimpleConnection@12eedfee [delegate=amqp://admin@172.16.1.135:5672/, localPort= 63907]
+14:05:01.122 logback [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  c.s.r.l.FanoutExchangeListener - 消息订阅者第一个队列返回的消息： 第一次往队列中添加值
+14:05:01.129 logback [SpringContextShutdownHook] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+14:05:02.128 logback [SpringContextShutdownHook] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+14:05:02.255 logback [SpringContextShutdownHook] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Shutdown ignored - container is not active already
+14:05:02.261 logback [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+17:32:37.670 logback [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@19:26 - no applicable action for [maxFileSize], current ElementPath  is [[configuration][appender][rollingPolicy][maxFileSize]]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:327)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:281)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:239)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:82)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:63)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:117)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:111)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:62)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:375)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
+	at com.springboot.rabbit.DemoApplication.main(DemoApplication.java:11)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.spi.Interpreter@19:26 - no applicable action for [maxFileSize], current ElementPath  is [[configuration][appender][rollingPolicy][maxFileSize]]
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:179)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:80)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:132)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:312)
+	... 18 common frames omitted
+17:33:51.868 logback [main] INFO  c.springboot.rabbit.DemoApplication - Starting DemoApplication using Java 1.8.0_66 on LiNing-PC with PID 35212 (E:\GitGroup\ProjectOne\target\classes started by LiNing in E:\GitGroup\ProjectOne)
+17:33:51.871 logback [main] INFO  c.springboot.rabbit.DemoApplication - No active profile set, falling back to default profiles: default
+17:33:52.289 logback [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'fastJsonMessageConverter' defined in class path resource [com/springboot/rabbit/util/FastJsonMessageConverter.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=fastJsonMessageConverter; factoryMethodName=fastJsonMessageConverter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/springboot/rabbit/util/FastJsonMessageConverter.class]] for bean 'fastJsonMessageConverter': There is already [Generic bean: class [com.springboot.rabbit.util.FastJsonMessageConverter]; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [E:\GitGroup\ProjectOne\target\classes\com\springboot\rabbit\util\FastJsonMessageConverter.class]] bound.
+17:33:52.297 logback [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+17:33:52.310 logback [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'fastJsonMessageConverter', defined in class path resource [com/springboot/rabbit/util/FastJsonMessageConverter.class], could not be registered. A bean with that name has already been defined in file [E:\GitGroup\ProjectOne\target\classes\com\springboot\rabbit\util\FastJsonMessageConverter.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+17:34:57.655 logback [main] INFO  c.springboot.rabbit.DemoApplication - Starting DemoApplication using Java 1.8.0_66 on LiNing-PC with PID 35436 (E:\GitGroup\ProjectOne\target\classes started by LiNing in E:\GitGroup\ProjectOne)
+17:34:57.672 logback [main] INFO  c.springboot.rabbit.DemoApplication - No active profile set, falling back to default profiles: default
+17:34:58.078 logback [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'fastJsonMessageConverter' defined in class path resource [com/springboot/rabbit/util/FastJsonMessageConverter.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=fastJsonMessageConverter; factoryMethodName=fastJsonMessageConverter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/springboot/rabbit/util/FastJsonMessageConverter.class]] for bean 'fastJsonMessageConverter': There is already [Generic bean: class [com.springboot.rabbit.util.FastJsonMessageConverter]; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [E:\GitGroup\ProjectOne\target\classes\com\springboot\rabbit\util\FastJsonMessageConverter.class]] bound.
+17:34:58.086 logback [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+17:34:58.098 logback [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'fastJsonMessageConverter', defined in class path resource [com/springboot/rabbit/util/FastJsonMessageConverter.class], could not be registered. A bean with that name has already been defined in file [E:\GitGroup\ProjectOne\target\classes\com\springboot\rabbit\util\FastJsonMessageConverter.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
